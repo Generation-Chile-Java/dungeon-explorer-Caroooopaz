@@ -160,7 +160,7 @@ public class JuegoDungeon {
 
     private void manejarMovimiento() {
         System.out.println("🧭 ¿Hacia dónde deseas aventurarte?");
-        System.out.println("   ⬆️  'arriba'    ⬇️  'abajo'    ⬅️  'izquierda'    ➡️  'derecha'");
+        System.out.println("   ⬆️  'arriba'/'u'   ⬇️  'abajo'/'d'   ⬅️  'izquierda'/'l'  ➡️  'derecha'/'r'");
         System.out.print("   🚪 Escribe tu elección (o 'q' para abandonar la mazmorra): ");
 
         String input = teclado.nextLine().toLowerCase().trim();
@@ -181,26 +181,26 @@ public class JuegoDungeon {
         switch (direction) {
             case "arriba":
             case "up":
-            case "w":
+            case "u":
                 nuevoX--;
                 break;
             case "abajo":
             case "down":
-            case "s":
+            case "d":
                 nuevoX++;
                 break;
             case "izquierda":
             case "left":
-            case "a":
+            case "l":
                 nuevoY--;
                 break;
             case "derecha":
             case "right":
-            case "d":
+            case "r":
                 nuevoY++;
                 break;
             default:
-                System.out.println("❌ Comando desconocido. Usa: 'arriba', 'abajo', 'izquierda', 'derecha' 🧭");
+                System.out.println("❌ Comando desconocido. Usa: 'arriba' o 'u', 'abajo' o 'd', 'izquierda'o 'l', 'derecha' o 'r' 🧭");
                 return;
         }
 

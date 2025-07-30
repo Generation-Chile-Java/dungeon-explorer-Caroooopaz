@@ -109,7 +109,7 @@ public class Jugador {
         return this.nombre;
     }
 
-    public int getAtaque() {
+    public int obtenerAtaque() {
         return this.ataque;
     }
 }
